@@ -4,8 +4,8 @@
     "baseUrl"    : "",
     "variations" : [
         {
-            "type": "open",
-            "description"         : "helloworld",
+            "type"                : "open",
+            "description"         : "This is the helloworld plugin hehe ?",
             "url"                 : "index.html",
             "icons"               : ["resources/img/icon.png", "resources/img/icon@2x.png"],
             "isViewer"            : false,
