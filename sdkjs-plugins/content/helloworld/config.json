@@ -16,7 +16,12 @@
             "initDataType"        : "none",
             "initData"            : "",
             "isUpdateOleOnResize" : true,
-            "buttons"             : []
+            "buttons"             : [
+                {
+                    "text": "Run",
+                    "primary": true
+                }
+            ]
         },
         {
             "description"         : "About",
