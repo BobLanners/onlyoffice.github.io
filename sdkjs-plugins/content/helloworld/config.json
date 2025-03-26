@@ -4,13 +4,14 @@
     "baseUrl"    : "",
     "variations" : [
         {
-            "description"         : "hello world",
+            "type": "open",
+            "description"         : "helloworld",
             "url"                 : "index.html",
             "icons"               : ["resources/img/icon.png", "resources/img/icon@2x.png"],
             "isViewer"            : false,
             "EditorsSupport"      : ["spreadsheet"],
-            "isVisual"            : false,
-            "isModal"             : true,
+            "isVisual"            : true,
+            "isModal"             : false,
             "isInsideMode"        : false,
             "initDataType"        : "none",
             "initData"            : "",
