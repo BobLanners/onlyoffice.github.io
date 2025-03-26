@@ -1,26 +1,43 @@
 #!/bin/bash
 
-# CONFIGURATION
+# ------------------------------
+# Configuration
+# ------------------------------
 PLUGIN_NAME="helloworld"
 PLUGIN_FOLDER="./sdkjs-plugins/content/$PLUGIN_NAME"
 DEPLOY_FOLDER="$PLUGIN_FOLDER/deploy"
-PLUGIN_OUTPUT="$DEPLOY_FOLDER/$PLUGIN_NAME.plugin"
+PLUGIN_OUTPUT="$PLUGIN_NAME.plugin"
 
-# Step 1: Remove old .plugin file
-echo "🗑 Removing old plugin..."
-rm -f "$PLUGIN_OUTPUT"
+# ------------------------------
+# Step 1: Clean up old .plugin file
+# ------------------------------
+echo "🗑 Removing old plugin (if any)..."
+rm -f "$DEPLOY_FOLDER/$PLUGIN_OUTPUT"
 
-# Step 2: Create new .plugin (excluding the deploy folder itself)
+# ------------------------------
+# Step 2: Build new .plugin file
+# ------------------------------
 echo "📦 Creating new .plugin package..."
-cd "$PLUGIN_FOLDER"
-zip -r "$PLUGIN_NAME.plugin" * -x "deploy/*"
-mv "$PLUGIN_NAME.plugin" "$DEPLOY_FOLDER"
-cd -
+cd "$PLUGIN_FOLDER" || { echo "❌ Failed to enter plugin folder"; exit 1; }
 
-# Step 3: Git commit & push
-echo "📤 Committing and pushing to GitHub..."
+# Zip everything except the deploy folder itself
+zip -r "$PLUGIN_OUTPUT" * -x "deploy/*"
+
+# Ensure deploy folder exists and move new plugin into it
+mkdir -p deploy
+mv "$PLUGIN_OUTPUT" "deploy/$PLUGIN_OUTPUT"
+
+cd - > /dev/null || exit 1
+
+# ------------------------------
+# Step 3: Push to GitHub (optional)
+# ------------------------------
+echo "📤 Committing and pushing changes to GitHub..."
 git add .
-git commit -m "Auto-deploy new plugin build"
+git commit -m "Update plugin package: $PLUGIN_NAME"
 git push origin master
 
-echo "✅ Done! Plugin packaged and pushed."
+# ------------------------------
+# Done!
+# ------------------------------
+echo "✅ Plugin packaged and deployed successfully!"
