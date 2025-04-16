@@ -5,7 +5,7 @@
     "variations" : [
         {
             "type"                : "open",
-            "description"         : "This is the helloworld plugin hehe ?",
+            "description"         : "Looking if this changes anything ?",
             "url"                 : "index.html",
             "icons"               : ["resources/img/icon.png", "resources/img/icon@2x.png"],
             "isViewer"            : false,
