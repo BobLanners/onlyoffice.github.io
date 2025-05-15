@@ -1,48 +1,27 @@
 {
-    "name"       : "helloworld",
-    "guid"       : "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
-    "baseUrl"    : "",
-    "variations" : [
+  "name": "HelloWorld",
+  "guid": "asc.{b21d1122-e456-431f-8bc3-239f2aa8055d}",
+  "version": "1.0",
+  "description": "Simple Hello World plugin",
+  "icons": ["resources/icon_16x16.png","resources/icon_32x32.png"],
+  "isVisual": true,
+  "EditorsSupport": ["cell"],
+  "variations": [
+    {
+      "type": "open",
+      "title": "Hello World",
+      "description": "Shows Hello World",
+      "url": "index.html",
+      "icons": ["resources/icon.png"],
+      "EditorsSupport": ["cell"],
+      "isVisual": true,
+      "isModal": false,
+      "buttons": [
         {
-            "type"                : "open",
-            "description"         : "Looking if this changes anything ?",
-            "url"                 : "index.html",
-            "icons"               : ["resources/img/icon.png", "resources/img/icon@2x.png"],
-            "isViewer"            : false,
-            "EditorsSupport"      : ["cell"],
-            "isVisual"            : true,
-            "isModal"             : false,
-            "isInsideMode"        : false,
-            "initDataType"        : "none",
-            "initData"            : "",
-            "isUpdateOleOnResize" : true,
-            "buttons"             : [
-                {
-                    "text": "Run",
-                    "primary": true
-                }
-            ]
-        },
-        {
-            "description"         : "About",
-            "url"                 : "index_about.html",
-            "icons"               : ["resources/img/icon.png", "resources/img/icon@2x.png"],
-            "isViewer"            : false,
-            "EditorsSupport"      : ["word"],
-            "isVisual"            : true,
-            "isModal"             : true,
-            "isInsideMode"        : false,
-            "initDataType"        : "none",
-            "initData"            : "",
-            "isUpdateOleOnResize" : true,
-            "buttons"         : [
-                {
-                    "text": "Ok",
-                    "primary": true
-                }
-            ],
-
-            "size" : [392, 147]
+          "text": "Run",
+          "primary": true
         }
-    ]
+      ]
+    }
+  ]
 }

@@ -1,16 +1,7 @@
-//Logic for the plugin. Buttons, scripts that can be called, etc.
-
 window.Asc.plugin.init = function () {
-    console.log("🧩 Plugin initialized");
+  console.log("🧩 Hello World plugin loaded.");
 };
 
 window.Asc.plugin.button = function () {
-    console.log("🔘 Plugin button clicked");
+  console.log("🔘 Run button clicked.");
 };
-
-window.Asc.plugin.button = function () {
-    console.log("Run button clicked!");
-    // Example action for spreadsheet
-    var sheet = Api.GetActiveSheet();
-    sheet.GetRange("A1").SetValue("Button was clicked!");
-  };
