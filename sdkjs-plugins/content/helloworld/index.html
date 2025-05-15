@@ -19,36 +19,44 @@
 <head>
   <meta charset="UTF-8" />
   <title>Hello World Plugin</title>
- <style>
-  body {
-    font-family: sans-serif;
-    padding: 20px;
-    background-color: #ffffff;   /* Light background */
-    color: #000000;              /* Dark text */
-  }
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #ffffff;
+      color: #000000;
+    }
 
-  input[type="text"] {
-    background-color: #f9f9f9;
-    color: #000000;
-    border: 1px solid #ccc;
-    padding: 8px;
-    font-size: 14px;
-    width: 100%;
-    margin-top: 5px;
-  }
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
 
-  label {
-    font-weight: bold;
-    margin-top: 20px;
-    display: block;
-  }
-</style>
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+      margin-top: 5px;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      color: #000000;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
   <h1>Hello World</h1>
 
   <label for="userInput">Some input</label>
   <input type="text" id="userInput" placeholder="Type something..." />
+
+  <button id="pasteButton">Paste to A1</button>
 
   <script src="scripts/helloworld.js"></script>
 </body>
