@@ -24,10 +24,26 @@
       font-family: sans-serif;
       padding: 20px;
     }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body>
   <h1>Hello World</h1>
+
+  <label for="userInput">Some input</label>
+  <input type="text" id="userInput" placeholder="Type something..." />
 
   <script src="scripts/helloworld.js"></script>
 </body>
