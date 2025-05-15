@@ -12,7 +12,7 @@
       "title": "Hello World",
       "description": "Shows Hello World",
       "url": "index.html",
-      "icons": ["resources/icon.png"],
+      "icons": ["resources/icon_16x16.png","resources/icon_32x32.png"],
       "EditorsSupport": ["cell"],
       "isVisual": true,
       "isModal": false,
