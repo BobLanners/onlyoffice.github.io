@@ -1,7 +1,12 @@
-window.Asc.plugin.button = function () {
-  Api.GetActiveSheet().GetRange("A1").SetValue("Hardcoded test");
+window.Asc.plugin.init = function () {
+  console.log("✅ Plugin loaded");
 };
 
 window.Asc.plugin.button = function () {
-  // Optional: leave empty or add logic for the Run button
+  console.log("🔘 Paste button clicked");
+
+  window.Asc.plugin.callCommand(function () {
+    var sheet = Api.GetActiveSheet();
+    sheet.GetRange("A1").SetValue("Hello from plugin");
+  }, true);
 };
