@@ -8,7 +8,7 @@
   "EditorsSupport": ["cell"],
   "variations": [
     {
-      "type": "window",
+      "type": "panel",
       "title": "Hello World",
       "description": "Shows Hello World",
       "url": "index.html",
