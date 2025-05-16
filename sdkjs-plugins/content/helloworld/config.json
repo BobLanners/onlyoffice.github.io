@@ -15,13 +15,8 @@
       "icons": ["resources/img/icon_28x28.png","resources/img/icon_56x56.png"],
       "EditorsSupport": ["cell"],
       "isVisual": true,
-      "isModal": false,
-      "buttons": [
-        {
-          "text": "Run",
-          "primary": true
-        }
-      ]
+      "isActivated": true,
+      "isModal": false
     }
   ]
 }
