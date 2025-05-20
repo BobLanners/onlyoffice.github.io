@@ -21,7 +21,7 @@ echo "📦 Creating new .plugin package..."
 cd "$PLUGIN_FOLDER" || { echo "❌ Failed to enter plugin folder"; exit 1; }
 
 # Zip everything except the deploy folder itself
-zip -r "$PLUGIN_OUTPUT" * -x "deploy/*"
+zip -r "$PLUGIN_OUTPUT" * -x "deploy/*" -x "*.DS_Store"
 
 # Ensure deploy folder exists and move new plugin into it
 mkdir -p deploy
