@@ -1,5 +1,6 @@
+Api.ShowMessage("✅ plugin loaded");
 window.Asc.plugin.init = function () {
-  console.log("✅ Plugin loaded");
+  Api.ShowMessage("✅ plugin loaded");
 
   window.Asc.plugin.callCommand(function () {
     try {
