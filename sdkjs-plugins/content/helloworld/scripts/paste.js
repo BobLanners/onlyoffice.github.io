@@ -1,6 +1,5 @@
 window.Asc.plugin.init = function () {
-  window.Asc.plugin.callCommand(function () {
-    const sheet = Api.GetActiveSheet();
-    sheet.GetRange("A1").SetValue("Test from init");
-  }, true);
+  document.getElementById("pasteButton").addEventListener("click", function () {
+    window.Asc.plugin.executeMethod("PasteText", ["Hello World"]);
+  });
 };
