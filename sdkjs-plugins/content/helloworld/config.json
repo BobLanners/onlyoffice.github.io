@@ -3,7 +3,7 @@
   "guid": "asc.{b21d1122-e456-431f-8bc3-239f2aa8055d}",
   "version": "1.0",
   "description": "Simple Hello World plugin",
-  "icons": ["resources/icon_28x28.png","resources/icon_56x56.png"],
+  "icons": ["resources/img/icon_28x28.png","resources/img/icon_56x56.png"],
   "isVisual": true,
   "EditorsSupport": ["cell"],
   "variations": [
