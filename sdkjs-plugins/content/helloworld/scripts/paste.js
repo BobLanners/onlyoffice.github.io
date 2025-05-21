@@ -1,19 +1,25 @@
-(function(window, undefined){
+(function (window, undefined) {
+  // Define a scoped message (like HelloWorld plugin's "text")
+  Asc.scope.message = "Hello from plugin";
 
-    Asc.scope.message = "Hello from HelloWorld Spreadsheet!";
+  // Called when the plugin panel is initialized
+  window.Asc.plugin.init = function () {
+    Api.ShowMessage("✅ Plugin panel loaded");
 
-    window.Asc.plugin.init = function() {
-        Api.ShowMessage("✅ init hook ran");
+    // Run the command as soon as the plugin loads (no button for now)
+    window.Asc.plugin.callCommand(function () {
+      try {
+        const sheet = Api.GetActiveSheet();
+        const cell = sheet.GetRange("A1");
+        cell.SetValue(Asc.scope.message);
+      } catch (e) {
+        Api.ShowMessage("❌ Error: " + e.message);
+      }
+    }, true);
+  };
 
-        this.callCommand(function() {
-            try {
-                var sheet = Api.GetActiveSheet();
-                var cell = sheet.GetRange("A1");
-                cell.SetValue(Asc.scope.message);
-            } catch (e) {
-                Api.ShowMessage("❌ command error: " + e.message);
-            }
-        }, true);
-    };
-
-})(window, undefined);
+  // Optional: define button logic here if needed later
+  window.Asc.plugin.button = function () {
+    // Not used for panel-based plugins with custom HTML buttons
+  };
+})(window);
